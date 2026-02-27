@@ -32,7 +32,6 @@
             font-family: 'Playfair Display', serif;
         }
         
-        /* Custom Scrollbar - Dark */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -44,7 +43,6 @@
             border-radius: 4px;
         }
         
-        /* Electric Blue Gradient Text */
         .text-electric-gradient {
             background: linear-gradient(135deg, #00D4FF 0%, #0099CC 50%, #00D4FF 100%);
             -webkit-background-clip: text;
@@ -52,7 +50,6 @@
             background-clip: text;
         }
         
-        /* Grain Overlay */
         .grain-overlay {
             position: fixed;
             top: 0;
@@ -65,12 +62,10 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
         
-        /* Dark Gradient */
         .dark-gradient {
             background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
         }
         
-        /* Glass Card - Dark */
         .glass-card-dark {
             background: rgba(26, 26, 26, 0.6);
             backdrop-filter: blur(20px);
@@ -78,7 +73,6 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
         }
         
-        /* Electric Button */
         .btn-electric {
             background: transparent;
             color: var(--electric-blue);
@@ -95,7 +89,6 @@
             transform: scale(1.05);
         }
         
-        /* Solid Electric Button */
         .btn-electric-solid {
             background: var(--electric-blue);
             color: var(--dark-bg);
@@ -107,7 +100,6 @@
             transform: scale(1.05);
         }
         
-        /* Outline Buttons */
         .btn-outline-email {
             border: 2px solid #ff6b6b;
             color: #ff6b6b;
@@ -128,7 +120,6 @@
             color: var(--dark-bg);
         }
         
-        /* Pulse Animation */
         @keyframes pulse-electric {
             0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
             50% { box-shadow: 0 0 0 20px rgba(0, 212, 255, 0); }
@@ -137,7 +128,6 @@
             animation: pulse-electric 2s infinite;
         }
         
-        /* Floating Animation */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
@@ -146,7 +136,6 @@
             animation: float 6s ease-in-out infinite;
         }
         
-        /* Glow Effects */
         .glow-electric {
             box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
         }
@@ -154,7 +143,6 @@
             box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
         }
         
-        /* Loading Screen */
         .loader {
             position: fixed;
             inset: 0;
@@ -170,7 +158,6 @@
             pointer-events: none;
         }
         
-        /* Strikethrough Price */
         .price-strike {
             position: relative;
             display: inline-block;
@@ -186,7 +173,6 @@
             transform: rotate(-5deg);
         }
 
-        /* ONE badge rotation */
         @keyframes slow-spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -195,7 +181,6 @@
             animation: slow-spin 20s linear infinite;
         }
         
-        /* Custom Cursor */
         .cursor-glow {
             width: 20px;
             height: 20px;
@@ -208,7 +193,6 @@
             mix-blend-mode: difference;
         }
 
-        /* BW Image Filter */
         .bw-image {
             filter: grayscale(100%) contrast(1.2) brightness(0.9);
             transition: all 0.5s ease;
@@ -217,7 +201,6 @@
             filter: grayscale(0%) contrast(1.1) brightness(1);
         }
 
-        /* Contact card hover */
         .contact-card {
             transition: all 0.3s ease;
         }
@@ -226,7 +209,159 @@
             box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
         }
 
-        /* Image hover effects */
+        .img-zoom {
+            transition: transform 0.7s ease;
+        }
+        .img' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        .dark-gradient {
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
+        }
+        
+        .glass-card-dark {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+        
+        .btn-electric {
+            background: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .btn-electric:hover {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            transform: scale(1.05);
+        }
+        
+        .btn-electric-solid {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+        .btn-electric-solid:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline-email {
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-email:hover {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-outline-whatsapp {
+            border: 2px solid #00D4FF;
+            color: #00D4FF;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-whatsapp:hover {
+            background: #00D4FF;
+            color: var(--dark-bg);
+        }
+        
+        @keyframes pulse-electric {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(0, 212, 255, 0); }
+        }
+        .pulse-electric {
+            animation: pulse-electric 2s infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow-electric {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+        .glow-electric:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+        }
+        
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: #050505;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .price-strike {
+            position: relative;
+            display: inline-block;
+        }
+        .price-strike::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #666;
+            transform: rotate(-5deg);
+        }
+
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .slow-spin {
+            animation: slow-spin 20s linear infinite;
+        }
+        
+        .cursor-glow {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--electric-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            mix-blend-mode: difference;
+        }
+
+        .bw-image {
+            filter: grayscale(100%) contrast(1.2) brightness(0.9);
+            transition: all 0.5s ease;
+        }
+        .bw-image:hover {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
         .img-zoom {
             transition: transform 0.7s ease;
         }
@@ -234,15 +369,31 @@
             transform: scale(1.1);
         }
 
-        /* Gradient overlay for images */
         .img-overlay-dark {
             background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.3) 50%, transparent 100%);
         }
 
-        /* Lenny Kravitz specific images */
-        .lenny-portrait {
-            object-fit: cover;
-            object-position: center top;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo-item {
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        .logo-item:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -268,10 +419,7 @@
             <div class="flex justify-between items-center">
                 <div class="font-display text-2xl font-bold text-white tracking-wider flex items-center gap-3">
                     <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#00D4FF]/30">
-                        <img src="https://i.discogs.com/7K8X8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z.jpeg?w=100" 
-                             alt="LK" 
-                             class="w-full h-full object-cover bw-image"
-                             onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="LK" class="w-full h-full object-cover bw-image">
                     </div>
                     LENNY KRAVITZ
                 </div>
@@ -304,13 +452,11 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden dark-gradient">
-        <!-- Background Elements -->
         <div class="absolute inset-0">
             <div class="absolute top-20 right-10 w-96 h-96 bg-[#00D4FF] rounded-full blur-[200px] opacity-10"></div>
             <div class="absolute bottom-20 left-10 w-72 h-72 bg-[#00D4FF] rounded-full blur-[150px] opacity-5"></div>
         </div>
 
-        <!-- Hero Content -->
         <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
             
             <!-- Lenny Portrait -->
@@ -318,15 +464,11 @@
                 <div class="relative w-32 h-32">
                     <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20 slow-spin"></div>
                     <div class="relative w-full h-full rounded-full border-2 border-[#00D4FF]/30 overflow-hidden bg-black/50 backdrop-blur-sm">
-                        <img src="https://lastfm.freetls.fastly.net/i/u/770x0/8a0d6ffeb04e5a1c8b1f2c3d4e5f6a7b.jpg" 
-                             alt="Lenny Kravitz" 
-                             class="w-full h-full object-cover bw-image lenny-portrait"
-                             onerror="this.src='https://via.placeholder.com/300/0a0a0a/00D4FF?text=Lenny+Kravitz'">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="Lenny Kravitz" class="w-full h-full object-cover bw-image">
                     </div>
                 </div>
             </div>
             
-            <!-- Exclusive Badge -->
             <div class="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs tracking-[0.3em] mb-8 backdrop-blur-sm">
                 <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                 FOR ONE SPECIAL FAN ONLY
@@ -348,7 +490,6 @@
                 <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>DINNER WITH LENNY</span>
             </div>
 
-            <!-- The ONE Badge -->
             <div class="relative inline-block mb-12">
                 <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-2xl opacity-20 slow-spin"></div>
                 <div class="relative glass-card-dark w-32 h-32 rounded-full flex items-center justify-center border-[#00D4FF]/30 mx-auto overflow-hidden">
@@ -360,7 +501,6 @@
                 </div>
             </div>
 
-            <!-- Pricing Preview -->
             <div class="glass-card-dark rounded-2xl px-8 py-4 mb-8 inline-block border-white/10">
                 <div class="text-gray-500 text-sm mb-1">INVESTMENT</div>
                 <div class="flex items-center justify-center gap-3">
@@ -380,11 +520,729 @@
             </div>
 
             <div class="mt-8 text-gray-600 text-sm">
-                Contact: <span class="text-[#00D4FF]">Themanagamentteamofficialmail@gmail.com</span> • <span class="text-gray-400">+1 (626) 477-9033</span>
+                Contact: <span class="text-[#00D4FF]">Themanagementteamofficialmail@gmail.com</span> • <span class="text-gray-400">+1 (626) 477-9033</span>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="logo-container mt-12">
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        .dark-gradient {
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
+        }
+        
+        .glass-card-dark {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+        
+        .btn-electric {
+            background: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .btn-electric:hover {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            transform: scale(1.05);
+        }
+        
+        .btn-electric-solid {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+        .btn-electric-solid:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline-email {
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-email:hover {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-outline-whatsapp {
+            border: 2px solid #00D4FF;
+            color: #00D4FF;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-whatsapp:hover {
+            background: #00D4FF;
+            color: var(--dark-bg);
+        }
+        
+        @keyframes pulse-electric {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(0, 212, 255, 0); }
+        }
+        .pulse-electric {
+            animation: pulse-electric 2s infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow-electric {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+        .glow-electric:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+        }
+        
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: #050505;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .price-strike {
+            position: relative;
+            display: inline-block;
+        }
+        .price-strike::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #666;
+            transform: rotate(-5deg);
+        }
+
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .slow-spin {
+            animation: slow-spin 20s linear infinite;
+        }
+        
+        .cursor-glow {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--electric-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            mix-blend-mode: difference;
+        }
+
+        .bw-image {
+            filter: grayscale(100%) contrast(1.2) brightness(0.9);
+            transition: all 0.5s ease;
+        }
+        .bw-image:hover {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .img-zoom {
+            transition: transform 0.7s ease;
+        }
+        .img-zoom:hover {
+            transform: scale(1.1);
+        }
+
+        .img-overlay-dark {
+            background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.3) 50%, transparent 100%);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo-item {
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        .logo-item:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-glow hidden md:block" id="cursor"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="text-center">
+            <div class="w-24 h-24 rounded-full border-4 border-gray-700 border-t-[#00D4FF] animate-spin mb-4 mx-auto"></div>
+            <p class="font-display text-electric-gradient text-xl tracking-widest">INITIALIZING EXPERIENCE</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-display text-2xl font-bold text-white tracking-wider flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#00D4FF]/30">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="LK" class="w-full h-full object-cover bw-image">
+                    </div>
+                    LENNY KRAVITZ
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#experience" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">THE EXPERIENCE</a>
+                    <a href="#itinerary" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">3-DAY JOURNEY</a>
+                    <a href="#investment" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">INVESTMENT</a>
+                    <button onclick="scrollToContact()" class="btn-electric-solid px-6 py-2 rounded-full font-semibold text-sm tracking-wider pulse-electric">
+                        CLAIM YOUR SPOT
+                    </button>
+                </div>
+                <button class="md:hidden text-[#00D4FF]" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black z-30 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center space-y-8">
+        <a href="#experience" class="text-2xl font-display text-white" onclick="toggleMenu()">THE EXPERIENCE</a>
+        <a href="#itinerary" class="text-2xl font-display text-white" onclick="toggleMenu()">3-DAY JOURNEY</a>
+        <a href="#investment" class="text-2xl font-display text-white" onclick="toggleMenu()">INVESTMENT</a>
+        <button onclick="scrollToContact(); toggleMenu();" class="btn-electric-solid px-8 py-3 rounded-full font-semibold text-lg pulse-electric">
+            CLAIM YOUR SPOT
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden dark-gradient">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-10 w-96 h-96 bg-[#00D4FF] rounded-full blur-[200px] opacity-10"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-[#00D4FF] rounded-full blur-[150px] opacity-5"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+            
+            <!-- Lenny Portrait -->
+            <div class="mb-8 flex justify-center">
+                <div class="relative w-32 h-32">
+                    <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20 slow-spin"></div>
+                    <div class="relative w-full h-full rounded-full border-2 border-[#00D4FF]/30 overflow-hidden bg-black/50 backdrop-blur-sm">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="Lenny Kravitz" class="w-full h-full object-cover bw-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs tracking-[0.3em] mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                FOR ONE SPECIAL FAN ONLY
+            </div>
+            
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
+                <span class="block text-white">ESCAPE WITH</span>
+                <span class="block text-electric-gradient mt-2">LENNY</span>
+            </h1>
+            
+            <p class="font-serif text-2xl md:text-3xl text-gray-400 italic max-w-3xl mx-auto mb-6">
+                "Lenny has personally selected this experience for one dedicated fan. Could it be you?"
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-8 mb-12 text-sm tracking-widest text-gray-500">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>YACHT CRUISE</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>HELICOPTER</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>PRIVATE BEACH</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>DINNER WITH LENNY</span>
+            </div>
+
+            <div class="relative inline-block mb-12">
+                <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-2xl opacity-20 slow-spin"></div>
+                <div class="relative glass-card-dark w-32 h-32 rounded-full flex items-center justify-center border-[#00D4FF]/30 mx-auto overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="font-display text-5xl font-bold text-[#00D4FF]">1</div>
+                        <div class="text-[10px] tracking-widest text-gray-400">SPOT LEFT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card-dark rounded-2xl px-8 py-4 mb-8 inline-block border-white/10">
+                <div class="text-gray-500 text-sm mb-1">INVESTMENT</div>
+                <div class="flex items-center justify-center gap-3">
+                    <span class="price-strike text-gray-600 text-xl">$10,000</span>
+                    <span class="text-electric-gradient text-3xl font-display font-bold">$3,000</span>
+                </div>
+                <div class="text-xs text-[#00D4FF] mt-1">Lenny covers 70%</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToContact()" class="btn-electric-solid px-10 py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-2 group pulse-electric">
+                    CLAIM THIS EXPERIENCE
+                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mt-8 text-gray-600 text-sm">
+                Contact: <span class="text-[#00D4FF]">Themanagementteamofficialmail@gmail.com</span> • <span class="text-gray-400">+1 (626) 477-9033</span>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="logo-container mt-12">
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Global Tours</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">VIP Experience</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Secure Booking</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Verified Protection</span>
+                </div>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- The Opportunity -->
+    <section id="experience" class="py-24 relative bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1 bg-[#00D4FF]/10 border border-[#00D4FF]/30 rounded-full text-[#00D4FF] text-xs tracking-widest mb-6">
+                        PERSONALLY CURATED BY LENNY
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">AN INVITATION FOR ONE</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6 font-serif">
+                        This isn't a contest. This isn't a lottery. Lenny Kravitz has authorized his management to extend this exclusive invitation to <span class="text-[#00D4FF] font-bold">one special fan</span> who has shown unwavering dedication to the music, the message, and the movement.
+                    </p>
+                    <p class="text-gray-500 leading-relaxed mb-8">
+                        For three days, you'll share space, stories, sunsets, and silence with Lenny in a private paradise. No crowds. No stage. Just the artist and you, connected by the spirit of "Let Love Rule."
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Single Guest Experience</h4>
+                                <p class="text-gray-500 text-sm">You alone. Lenny. Three days of uninterrupted connection.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            ' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        .dark-gradient {
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
+        }
+        
+        .glass-card-dark {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+        
+        .btn-electric {
+            background: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .btn-electric:hover {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            transform: scale(1.05);
+        }
+        
+        .btn-electric-solid {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+        .btn-electric-solid:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline-email {
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-email:hover {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-outline-whatsapp {
+            border: 2px solid #00D4FF;
+            color: #00D4FF;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-whatsapp:hover {
+            background: #00D4FF;
+            color: var(--dark-bg);
+        }
+        
+        @keyframes pulse-electric {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(0, 212, 255, 0); }
+        }
+        .pulse-electric {
+            animation: pulse-electric 2s infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow-electric {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+        .glow-electric:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+        }
+        
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: #050505;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .price-strike {
+            position: relative;
+            display: inline-block;
+        }
+        .price-strike::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #666;
+            transform: rotate(-5deg);
+        }
+
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .slow-spin {
+            animation: slow-spin 20s linear infinite;
+        }
+        
+        .cursor-glow {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--electric-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            mix-blend-mode: difference;
+        }
+
+        .bw-image {
+            filter: grayscale(100%) contrast(1.2) brightness(0.9);
+            transition: all 0.5s ease;
+        }
+        .bw-image:hover {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .img-zoom {
+            transition: transform 0.7s ease;
+        }
+        .img-zoom:hover {
+            transform: scale(1.1);
+        }
+
+        .img-overlay-dark {
+            background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.3) 50%, transparent 100%);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo-item {
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        .logo-item:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-glow hidden md:block" id="cursor"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="text-center">
+            <div class="w-24 h-24 rounded-full border-4 border-gray-700 border-t-[#00D4FF] animate-spin mb-4 mx-auto"></div>
+            <p class="font-display text-electric-gradient text-xl tracking-widest">INITIALIZING EXPERIENCE</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-display text-2xl font-bold text-white tracking-wider flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#00D4FF]/30">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="LK" class="w-full h-full object-cover bw-image">
+                    </div>
+                    LENNY KRAVITZ
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#experience" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">THE EXPERIENCE</a>
+                    <a href="#itinerary" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">3-DAY JOURNEY</a>
+                    <a href="#investment" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">INVESTMENT</a>
+                    <button onclick="scrollToContact()" class="btn-electric-solid px-6 py-2 rounded-full font-semibold text-sm tracking-wider pulse-electric">
+                        CLAIM YOUR SPOT
+                    </button>
+                </div>
+                <button class="md:hidden text-[#00D4FF]" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black z-30 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center space-y-8">
+        <a href="#experience" class="text-2xl font-display text-white" onclick="toggleMenu()">THE EXPERIENCE</a>
+        <a href="#itinerary" class="text-2xl font-display text-white" onclick="toggleMenu()">3-DAY JOURNEY</a>
+        <a href="#investment" class="text-2xl font-display text-white" onclick="toggleMenu()">INVESTMENT</a>
+        <button onclick="scrollToContact(); toggleMenu();" class="btn-electric-solid px-8 py-3 rounded-full font-semibold text-lg pulse-electric">
+            CLAIM YOUR SPOT
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden dark-gradient">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-10 w-96 h-96 bg-[#00D4FF] rounded-full blur-[200px] opacity-10"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-[#00D4FF] rounded-full blur-[150px] opacity-5"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+            
+            <!-- Lenny Portrait -->
+            <div class="mb-8 flex justify-center">
+                <div class="relative w-32 h-32">
+                    <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20 slow-spin"></div>
+                    <div class="relative w-full h-full rounded-full border-2 border-[#00D4FF]/30 overflow-hidden bg-black/50 backdrop-blur-sm">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="Lenny Kravitz" class="w-full h-full object-cover bw-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs tracking-[0.3em] mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                FOR ONE SPECIAL FAN ONLY
+            </div>
+            
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
+                <span class="block text-white">ESCAPE WITH</span>
+                <span class="block text-electric-gradient mt-2">LENNY</span>
+            </h1>
+            
+            <p class="font-serif text-2xl md:text-3xl text-gray-400 italic max-w-3xl mx-auto mb-6">
+                "Lenny has personally selected this experience for one dedicated fan. Could it be you?"
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-8 mb-12 text-sm tracking-widest text-gray-500">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>YACHT CRUISE</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>HELICOPTER</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>PRIVATE BEACH</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>DINNER WITH LENNY</span>
+            </div>
+
+            <div class="relative inline-block mb-12">
+                <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-2xl opacity-20 slow-spin"></div>
+                <div class="relative glass-card-dark w-32 h-32 rounded-full flex items-center justify-center border-[#00D4FF]/30 mx-auto overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="font-display text-5xl font-bold text-[#00D4FF]">1</div>
+                        <div class="text-[10px] tracking-widest text-gray-400">SPOT LEFT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card-dark rounded-2xl px-8 py-4 mb-8 inline-block border-white/10">
+                <div class="text-gray-500 text-sm mb-1">INVESTMENT</div>
+                <div class="flex items-center justify-center gap-3">
+                    <span class="price-strike text-gray-600 text-xl">$10,000</span>
+                    <span class="text-electric-gradient text-3xl font-display font-bold">$3,000</span>
+                </div>
+                <div class="text-xs text-[#00D4FF] mt-1">Lenny covers 70%</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToContact()" class="btn-electric-solid px-10 py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-2 group pulse-electric">
+                    CLAIM THIS EXPERIENCE
+                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mt-8 text-gray-600 text-sm">
+                Contact: <span class="text-[#00D4FF]">Themanagementteamofficialmail@gmail.com</span> • <span class="text-gray-400">+1 (626) 477-9033</span>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="logo-container mt-12">
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Global Tours</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">VIP Experience</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Secure Booking</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Verified Protection</span>
+                </div>
+            </div>
+        </div>
+
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
@@ -449,10 +1307,7 @@
                     <div class="absolute inset-0 bg-[#00D4FF] rounded-2xl blur-2xl opacity-10 transform rotate-3"></div>
                     <div class="relative glass-card-dark rounded-2xl p-4 float-anim border border-white/10">
                         <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 bg-gray-900 relative">
-                            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d.jpg" 
-                                 alt="Lenny Kravitz Portrait" 
-                                 class="w-full h-full object-cover bw-image lenny-portrait img-zoom"
-                                 onerror="this.src='https://via.placeholder.com/400/0a0a0a/00D4FF?text=Lenny+Kravitz'">
+                            <img src="https://kimi-web-img.moonshot.cn/img/people.com/c1642f205a178500c46b1cefaff60248b5149f27.jpg" alt="Lenny Kravitz Portrait" class="w-full h-full object-cover bw-image img-zoom">
                             <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 left-4 right-4">
                                 <div class="text-[#00D4FF] text-xs tracking-widest mb-1">YOUR HOST</div>
@@ -482,28 +1337,6 @@
         </div>
     </section>
 
-    <!-- Lenny Gallery Strip -->
-    <section class="py-12 bg-black overflow-hidden">
-        <div class="flex gap-4 animate-marquee whitespace-nowrap">
-            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d.jpg" 
-                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
-                 alt="Lenny Kravitz"
-                 onerror="this.style.display='none'">
-            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e.jpg" 
-                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
-                 alt="Lenny Kravitz Performing"
-                 onerror="this.style.display='none'">
-            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f.jpg" 
-                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
-                 alt="Lenny Kravitz"
-                 onerror="this.style.display='none'">
-            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b.jpg" 
-                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
-                 alt="Lenny Kravitz"
-                 onerror="this.style.display='none'">
-        </div>
-    </section>
-
     <!-- 3-Day Itinerary -->
     <section id="itinerary" class="py-24 relative bg-gradient-to-b from-[#0a0a0a] to-[#050505]">
         <div class="max-w-7xl mx-auto px-6">
@@ -519,17 +1352,12 @@
                 <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
                     <div class="grid md:grid-cols-2">
                         <div class="relative h-64 md:h-auto overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&q=80" 
-                                 alt="Helicopter Arrival" 
-                                 class="w-full h-full object-cover bw-image img-zoom">
+                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&q=80" alt="Helicopter Arrival" class="w-full h-full object-cover bw-image img-zoom">
                             <div class="absolute top-4 left-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 1</div>
                             <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 left-4 right-4">
                                 <div class="flex items-center gap-3">
-                                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d.jpg" 
-                                         class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
-                                         alt="Lenny"
-                                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" alt="Lenny">
                                     <div class="text-white text-sm font-bold">Lenny awaits your arrival</div>
                                 </div>
                             </div>
@@ -563,10 +1391,7 @@
                                 </div>
                             </div>
                             <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
-                                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e.jpg" 
-                                     class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
-                                     alt="Lenny Kravitz"
-                                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                                <img src="https://kimi-web-img.moonshot.cn/img/www.rollingstone.com/a71e1531d92e59c7009466c8fd8d63cd5413d263.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" alt="Lenny Kravitz">
                                 <div>
                                     <p class="text-gray-400 italic text-sm">"From the moment you land, you're family. Let's break bread and share stories."</p>
                                     <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
@@ -608,29 +1433,21 @@
                                 </div>
                             </div>
                             <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
-                                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f.jpg" 
-                                     class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
-                                     alt="Lenny Kravitz Performing"
-                                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                                <img src="https://kimi-web-img.moonshot.cn/img/cdn.artphotolimited.com/54f343d9f6bb8298a98cc7645bee4ad43a6f9e60.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" alt="Lenny Kravitz">
                                 <div>
-                                    <p class="text-gray-400 italic text-sm">"The ocean has a way of washing away everything but what matters. Let's get lost in the music."</p>
+                                    <p class="text-gray-400 italic text-sm">"Music sounds better on the water. Let's make some memories."</p>
                                     <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
                                 </div>
                             </div>
                         </div>
                         <div class="relative h-64 md:h-auto overflow-hidden order-1 md:order-2">
-                            <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80" 
-                                 alt="Yacht Experience" 
-                                 class="w-full h-full object-cover bw-image img-zoom">
+                            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80" alt="Yacht Cruise" class="w-full h-full object-cover bw-image img-zoom">
                             <div class="absolute top-4 right-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 2</div>
                             <div class="absolute inset-0 img-overlay-dark"></div>
-                            <div class="absolute bottom-4 right-4 left-4">
+                            <div class="absolute bottom-4 left-4 right-4">
                                 <div class="flex items-center gap-3 justify-end">
-                                    <div class="text-white text-sm font-bold text-right">Making music together</div>
-                                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b.jpg" 
-                                         class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
-                                         alt="Lenny"
-                                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                                    <div class="text-white text-sm font-bold">Cruising with Lenny</div>
+                                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" alt="Lenny">
                                 </div>
                             </div>
                         </div>
@@ -641,56 +1458,618 @@
                 <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
                     <div class="grid md:grid-cols-2">
                         <div class="relative h-64 md:h-auto overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" 
-                                 alt="Private Dinner" 
-                                 class="w-full h-full object-cover bw-image img-zoom">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Private Dinner" class="w-full h-full object-cover bw-image img-zoom">
                             <div class="absolute top-4 left-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 3</div>
                             <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 left-4 right-4">
                                 <div class="flex items-center gap-3">
-                                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d.jpg" 
-                                         class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
-                                         alt="Lenny"
-                                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
-                                    <div class="text-white text-sm font-bold">A farewell to remember</div>
+                                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" alt="Lenny">
+                                    <div class="text-white text-sm font-bold">Farewell dinner</div>
                                 </div>
                             </div>
                         </div>
                         <div class="p-8 md:p-12 flex flex-col justify-center">
-                            <h3 class="font-display text-3xl font-bold text-white mb-4">The Bond</h3>
+                            <h3 class="font-display text-3xl font-bold text-white mb-4">The Celebration</h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 ' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        .dark-gradient {
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
+        }
+        
+        .glass-card-dark {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+        
+        .btn-electric {
+            background: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .btn-electric:hover {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            transform: scale(1.05);
+        }
+        
+        .btn-electric-solid {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+        .btn-electric-solid:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline-email {
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-email:hover {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-outline-whatsapp {
+            border: 2px solid #00D4FF;
+            color: #00D4FF;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-whatsapp:hover {
+            background: #00D4FF;
+            color: var(--dark-bg);
+        }
+        
+        @keyframes pulse-electric {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(0, 212, 255, 0); }
+        }
+        .pulse-electric {
+            animation: pulse-electric 2s infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow-electric {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+        .glow-electric:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+        }
+        
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: #050505;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .price-strike {
+            position: relative;
+            display: inline-block;
+        }
+        .price-strike::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #666;
+            transform: rotate(-5deg);
+        }
+
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .slow-spin {
+            animation: slow-spin 20s linear infinite;
+        }
+        
+        .cursor-glow {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--electric-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            mix-blend-mode: difference;
+        }
+
+        .bw-image {
+            filter: grayscale(100%) contrast(1.2) brightness(0.9);
+            transition: all 0.5s ease;
+        }
+        .bw-image:hover {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .img-zoom {
+            transition: transform 0.7s ease;
+        }
+        .img-zoom:hover {
+            transform: scale(1.1);
+        }
+
+        .img-overlay-dark {
+            background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.3) 50%, transparent 100%);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo-item {
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        .logo-item:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-glow hidden md:block" id="cursor"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="text-center">
+            <div class="w-24 h-24 rounded-full border-4 border-gray-700 border-t-[#00D4FF] animate-spin mb-4 mx-auto"></div>
+            <p class="font-display text-electric-gradient text-xl tracking-widest">INITIALIZING EXPERIENCE</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-display text-2xl font-bold text-white tracking-wider flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#00D4FF]/30">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="LK" class="w-full h-full object-cover bw-image">
+                    </div>
+                    LENNY KRAVITZ
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#experience" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">THE EXPERIENCE</a>
+                    <a href="#itinerary" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">3-DAY JOURNEY</a>
+                    <a href="#investment" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">INVESTMENT</a>
+                    <button onclick="scrollToContact()" class="btn-electric-solid px-6 py-2 rounded-full font-semibold text-sm tracking-wider pulse-electric">
+                        CLAIM YOUR SPOT
+                    </button>
+                </div>
+                <button class="md:hidden text-[#00D4FF]" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black z-30 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center space-y-8">
+        <a href="#experience" class="text-2xl font-display text-white" onclick="toggleMenu()">THE EXPERIENCE</a>
+        <a href="#itinerary" class="text-2xl font-display text-white" onclick="toggleMenu()">3-DAY JOURNEY</a>
+        <a href="#investment" class="text-2xl font-display text-white" onclick="toggleMenu()">INVESTMENT</a>
+        <button onclick="scrollToContact(); toggleMenu();" class="btn-electric-solid px-8 py-3 rounded-full font-semibold text-lg pulse-electric">
+            CLAIM YOUR SPOT
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden dark-gradient">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-10 w-96 h-96 bg-[#00D4FF] rounded-full blur-[200px] opacity-10"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-[#00D4FF] rounded-full blur-[150px] opacity-5"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+            
+            <!-- Lenny Portrait -->
+            <div class="mb-8 flex justify-center">
+                <div class="relative w-32 h-32">
+                    <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20 slow-spin"></div>
+                    <div class="relative w-full h-full rounded-full border-2 border-[#00D4FF]/30 overflow-hidden bg-black/50 backdrop-blur-sm">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="Lenny Kravitz" class="w-full h-full object-cover bw-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs tracking-[0.3em] mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                FOR ONE SPECIAL FAN ONLY
+            </div>
+            
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
+                <span class="block text-white">ESCAPE WITH</span>
+                <span class="block text-electric-gradient mt-2">LENNY</span>
+            </h1>
+            
+            <p class="font-serif text-2xl md:text-3xl text-gray-400 italic max-w-3xl mx-auto mb-6">
+                "Lenny has personally selected this experience for one dedicated fan. Could it be you?"
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-8 mb-12 text-sm tracking-widest text-gray-500">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>YACHT CRUISE</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>HELICOPTER</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>PRIVATE BEACH</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>DINNER WITH LENNY</span>
+            </div>
+
+            <div class="relative inline-block mb-12">
+                <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-2xl opacity-20 slow-spin"></div>
+                <div class="relative glass-card-dark w-32 h-32 rounded-full flex items-center justify-center border-[#00D4FF]/30 mx-auto overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="font-display text-5xl font-bold text-[#00D4FF]">1</div>
+                        <div class="text-[10px] tracking-widest text-gray-400">SPOT LEFT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card-dark rounded-2xl px-8 py-4 mb-8 inline-block border-white/10">
+                <div class="text-gray-500 text-sm mb-1">INVESTMENT</div>
+                <div class="flex items-center justify-center gap-3">
+                    <span class="price-strike text-gray-600 text-xl">$10,000</span>
+                    <span class="text-electric-gradient text-3xl font-display font-bold">$3,000</span>
+                </div>
+                <div class="text-xs text-[#00D4FF] mt-1">Lenny covers 70%</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToContact()" class="btn-electric-solid px-10 py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-2 group pulse-electric">
+                    CLAIM THIS EXPERIENCE
+                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mt-8 text-gray-600 text-sm">
+                Contact: <span class="text-[#00D4FF]">Themanagementteamofficialmail@gmail.com</span> • <span class="text-gray-400">+1 (626) 477-9033</span>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="logo-container mt-12">
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Global Tours</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">VIP Experience</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Secure Booking</span>
+                </div>
+                <div class="logo-item flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                    </svg>
+                    <span class="text-xs mt-2 text-gray-500">Verified Protection</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- The Opportunity -->
+    <section id="experience" class="py-24 relative bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1 bg-[#00D4FF]/10 border border-[#00D4FF]/30 rounded-full text-[#00D4FF] text-xs tracking-widest mb-6">
+                        PERSONALLY CURATED BY LENNY
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">AN INVITATION FOR ONE</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6 font-serif">
+                        This isn't a contest. This isn't a lottery. Lenny Kravitz has authorized his management to extend this exclusive invitation to <span class="text-[#00D4FF] font-bold">one special fan</span> who has shown unwavering dedication to the music, the message, and the movement.
+                    </p>
+                    <p class="text-gray-500 leading-relaxed mb-8">
+                        For three days, you'll share space, stories, sunsets, and silence with Lenny in a private paradise. No crowds. No stage. Just the artist and you, connected by the spirit of "Let Love Rule."
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Single Guest Experience</h4>
+                                <p class="text-gray-500 text-sm">You alone. Lenny. Three days of uninterrupted connection.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Hand-Selected by Management</h4>
+                                <p class="text-gray-500 text-sm">Contact verified directly via official channels only.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Disclosed Upon Confirmation</h4>
+                                <p class="text-gray-500 text-sm">Location and dates shared only with the selected participant for privacy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute inset-0 bg-[#00D4FF] rounded-2xl blur-2xl opacity-10 transform rotate-3"></div>
+                    <div class="relative glass-card-dark rounded-2xl p-4 float-anim border border-white/10">
+                        <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 bg-gray-900 relative">
+                            <img src="https://kimi-web-img.moonshot.cn/img/people.com/c1642f205a178500c46b1cefaff60248b5149f27.jpg" alt="Lenny Kravitz Portrait" class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute inset-0 img-overlay-dark"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="text-[#00D4FF] text-xs tracking-widest mb-1">YOUR HOST</div>
+                                <div class="text-white font-display text-xl">Lenny Kravitz</div>
+                                <div class="text-gray-400 text-sm">4x Grammy Award Winner</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-center px-2">
+                            <div>
+                                <div class="text-2xl font-bold text-[#00D4FF]">3</div>
+                                <div class="text-xs text-gray-500">DAYS</div>
+                            </div>
+                            <div class="h-8 w-px bg-gray-800"></div>
+                            <div>
+                                <div class="text-2xl font-bold text-[#00D4FF]">1</div>
+                                <div class="text-xs text-gray-500">GUEST</div>
+                            </div>
+                            <div class="h-8 w-px bg-gray-800"></div>
+                            <div>
+                                <div class="text-2xl font-bold text-[#00D4FF]">1</div>
+                                <div class="text-xs text-gray-500">LEGEND</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Day Itinerary -->
+    <section id="itinerary" class="py-24 relative bg-gradient-to-b from-[#0a0a0a] to-[#050505]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">YOUR 3-DAY JOURNEY</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto font-serif text-lg">
+                    A personalized itinerary designed for deep connection and unforgettable memories with Lenny.
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Day 1 -->
+                <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
+                    <div class="grid md:grid-cols-2">
+                        <div class="relative h-64 md:h-auto overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&q=80" alt="Helicopter Arrival" class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute top-4 left-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 1</div>
+                            <div class="absolute inset-0 img-overlay-dark"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" alt="Lenny">
+                                    <div class="text-white text-sm font-bold">Lenny awaits your arrival</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center">
+                            <h3 class="font-display text-3xl font-bold text-white mb-4">The Arrival</h3>
                             <div class="space-y-4 mb-6">
                                 <div class="flex items-center gap-3 text-gray-400">
                                     <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
-                                    <span>Morning meditation and yoga with Lenny</span>
+                                    <span>Private helicopter transfer to exclusive location</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-400">
                                     <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
-                                    <span>Personal Q&A: Ask anything</span>
+                                    <span>Personal welcome from Lenny at private villa</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-400">
                                     <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
-                                    <span>Farewell feast: Chef's table experience</span>
+                                    <span>Sunset acoustic performance (just for you)</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-400">
                                     <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
-                                    <span>Exclusive signed guitar & personal memorabilia</span>
+                                    <span>Intimate dinner: conversation and connection</span>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
-                                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f.jpg" 
-                                     class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
-                                     alt="Lenny Kravitz"
-                                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                                <img src="https://kimi-web-img.moonshot.cn/img/www.rollingstone.com/a71e1531d92e59c7009466c8fd8d63cd5413d263.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" alt="Lenny Kravitz">
                                 <div>
-                                    <p class="text-gray-400 italic text-sm">"Goodbyes are just see-you-laters. You'll leave with a piece of my heart, and I'll have a piece of yours."</p>
+                                    <p class="text-gray-400 italic text-sm">"From the moment you land, you're family. Let's break bread and share stories."</p>
+                                    <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
+                    <div class="grid md:grid-cols-2">
+                        <div class="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+                            <h3 class="font-display text-3xl font-bold text-white mb-4">The Adventure</h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Private yacht cruise to secluded beach</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Beachside lunch prepared by personal chef</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Jam session: Lenny plays your requests</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Stargazing and deep conversation on deck</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                                <img src="https://kimi-web-img.moonshot.cn/img/cdn.artphotolimited.com/54f343d9f6bb8298a98cc7645bee4ad43a6f9e60.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" alt="Lenny Kravitz">
+                                <div>
+                                    <p class="text-gray-400 italic text-sm">"Music sounds better on the water. Let's make some memories."</p>
+                                    <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative h-64 md:h-auto overflow-hidden order-1 md:order-2">
+                            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80" alt="Yacht Cruise" class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute top-4 right-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 2</div>
+                            <div class="absolute inset-0 img-overlay-dark"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex items-center gap-3 justify-end">
+                                    <div class="text-white text-sm font-bold">Cruising with Lenny</div>
+                                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" alt="Lenny">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
+                    <div class="grid md:grid-cols-2">
+                        <div class="relative h-64 md:h-auto overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Private Dinner" class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute top-4 left-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 3</div>
+                            <div class="absolute inset-0 img-overlay-dark"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" alt="Lenny">
+                                    <div class="text-white text-sm font-bold">Farewell dinner</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center">
+                            <h3 class="font-display text-3xl font-bold text-white mb-4">The Celebration</h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Private cooking class with Lenny</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Exclusive gift: Signed guitar & memorabilia</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Final acoustic set: Your favorite songs</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Private transfer back to reality</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                                <img src="https://kimi-web-img.moonshot.cn/img/en.worldtempus.com/1b87baea8a4378a76afe742350dc303f275687d0.jpeg" class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" alt="Lenny Kravitz">
+                                <div>
+                                    <p class="text-gray-400 italic text-sm">"This isn't goodbye. This is just the beginning of a lifelong friendship."</p>
                                     <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
                                 </div>
                             </div>
@@ -701,307 +2080,222 @@
         </div>
     </section>
 
-    <!-- Lenny Quote Section with Background Image -->
-    <section class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.jpg" 
-                 class="w-full h-full object-cover opacity-20 bw-image" 
-                 alt="Lenny Kravitz Background"
-                 onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/80 to-[#050505]"></div>
-        </div>
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <img src="https://lastfm.freetls.fastly.net/i/u/200x0/1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.jpg" 
-                 class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-[#00D4FF] object-cover bw-image" 
-                 alt="Lenny Kravitz"
-                 onerror="this.src='https://via.placeholder.com/200/0a0a0a/00D4FF?text=LK'">
-            <blockquote class="font-serif text-3xl md:text-4xl text-white italic mb-6">
-                "Let Love Rule isn't just a song—it's a way of life. I'm looking for someone who lives that truth."
-            </blockquote>
-            <div class="text-[#00D4FF] font-display text-xl font-bold">— Lenny Kravitz</div>
-        </div>
-    </section>
-
     <!-- Investment Section -->
-    <section id="investment" class="py-24 relative bg-[#050505] overflow-hidden">
-        <!-- Background Glow -->
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D4FF] rounded-full blur-[200px] opacity-5"></div>
-        
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">THE INVESTMENT</h2>
-                <p class="text-gray-500 font-serif text-lg">Lenny believes this experience should be accessible to a true fan.</p>
-            </div>
+    <section id="investment" class="py-24 relative bg-[#050505]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">THE INVESTMENT</h2>
+            <p class="text-gray-500 mb-12 font-serif text-lg">
+                Lenny believes this experience should be accessible to a true fan, not just the wealthy.
+            </p>
 
             <div class="glass-card-dark rounded-3xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
-                <!-- Special Badge -->
-                <div class="absolute -top-6 -right-6 bg-red-500 text-white w-32 h-32 flex items-center justify-center transform rotate-12 shadow-2xl">
-                    <div class="text-center transform -rotate-12">
-                        <div class="font-bold text-xs tracking-wider">ONLY</div>
-                        <div class="font-bold text-2xl">ONE</div>
-                        <div class="font-bold text-xs">SPOT</div>
-                    </div>
-                </div>
-
-                <!-- Lenny Image in Card -->
-                <div class="flex justify-center mb-8">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20"></div>
-                        <img src="https://lastfm.freetls.fastly.net/i/u/200x0/2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.jpg" 
-                             class="relative w-32 h-32 rounded-full border-4 border-[#00D4FF] object-cover bw-image" 
-                             alt="Lenny Kravitz"
-                             onerror="this.src='https://via.placeholder.com/200/0a0a0a/00D4FF?text=LK'">
-                    </div>
-                </div>
-
-                <div class="text-center mb-8">
-                    <div class="text-gray-500 mb-2 text-sm tracking-widest">TOTAL EXPERIENCE VALUE</div>
-                    <div class="price-strike text-gray-600 text-3xl font-display mb-4">$10,000</div>
-                    
-                    <div class="flex justify-center items-center gap-4 mb-6">
-                        <div class="text-right">
-                            <div class="text-[#00D4FF] text-sm font-bold">LENNY COVERS</div>
-                            <div class="text-gray-600 text-xs">$7,000 (70%)</div>
-                        </div>
-                        <div class="h-12 w-px bg-gray-800"></div>
-                        <div class="text-left">
-                            <div class="text-gray-400 text-sm font-bold">YOU INVEST</div>
-                            <div class="text-electric-gradient text-5xl font-display font-bold">$3,000</div>
-                        </div>
-                    </div>
-                    
-                    <div class="inline-block bg-[#00D4FF]/10 border border-[#00D4FF]/30 text-[#00D4FF] px-4 py-2 rounded-full text-sm">
-                        ✓ All-inclusive • No hidden costs • Personal concierge
-                    </div>
-                </div>
-
-                <div class="space-y-4 mb-8">
-                    <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-500">Private Villa Suite (3 nights)</span>
-                        <span class="text-white font-semibold">Included</span>
-                    </div>
-                    <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-500">Helicopter Airport Transfer</span>
-                        <span class="text-white font-semibold">Included</span>
-                    </div>
-                    <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-500">Private Yacht & Captain</span>
-                        <span class="text-white font-semibold">Included</span>
-                    </div>
-                    <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-500">All Meals & Premium Beverages</span>
-                        <span class="text-white font-semibold">Included</span>
-                    </div>
-                    <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-500">Personal Photographer</span>
-                        <span class="text-white font-semibold">Included</span>
-                    </div>
-                    <div class="flex justify-between items-center py-3">
-                        <span class="text-gray-500">Signed Gibson Guitar & Memorabilia</span>
-                        <span class="text-white font-semibold">Included</span>
-                    </div>
-                </div>
-
-                <div class="bg-[#00D4FF]/5 rounded-xl p-6 mb-8 border border-[#00D4FF]/20">
-                    <div class="flex items-start gap-4">
-                        <img src="https://lastfm.freetls.fastly.net/i/u/100x0/3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.jpg" 
-                             class="w-12 h-12 rounded-full object-cover border-2 border-[#00D4FF] bw-image flex-shrink-0" 
-                             alt="Lenny Kravitz"
-                             onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
-                        <div>
-                            <h4 class="font-bold text-white mb-1">Selection Process</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed">
-                                This invitation is extended to one fan only. Contact management directly via email or WhatsApp to express your interest. Dates and location will be disclosed upon selection. Verification required.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact CTA -->
-                <div class="grid md:grid-cols-2 gap-4">
-                    <a href="mailto:Themanagamentteamofficialmail@gmail.com?subject=Lenny%20Kravitz%203-Day%20Experience%20Inquiry" 
-                       class="btn-outline-email py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-3 bg-transparent">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        EMAIL MANAGEMENT
-                    </a>
-                    <a href="https://wa.me/16264779033?text=Hello%2C%20I%20am%20interested%20in%20the%20Lenny%20Kravitz%203-day%20experience.%20Please%20provide%20more%20information." 
-                       target="_blank"
-                       class="btn-outline-whatsapp py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-3 bg-transparent">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                        WHATSAPP +1 (626) 477-9033
-                    </a>
-                </div>
+                <div class="absolute top-0 right-0 w-64 h-64 bg-[#00D4FF] rounded-full blur-[100px] opacity-10"></div>
                 
-                <p class="text-center text-gray-600 text-xs mt-4">
-                    Official Management Contact Only • Verification Required • Serious Inquiries Only
-                </p>
+                <div class="relative z-10">
+                    <div class="flex justify-center items-center gap-4 mb-8">
+                        <span class="price-strike text-gray-600 text-3xl">$10,000</span>
+                        <span class="text-electric-gradient text-6xl md:text-7xl font-display font-bold">$3,000</span>
+                    </div>
+                    
+                    <div class="inline-block px-4 py-2 bg-[#00D4FF]/10 border border-[#00D4FF]/30 rounded-full text-[#00D4FF] text-sm tracking-widest mb-8">
+                        LENNY COVERS 70% • YOU PAY ONLY 30%
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 text-left mb-8">
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <div class="text-[#00D4FF] text-2xl mb-2">✓</div>
+                            <div class="text-white font-bold mb-1">All Inclusive</div>
+                            <div class="text-gray-500 text-sm">Meals, transfers, accommodation</div>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <div class="text-[#00D4FF] text-2xl mb-2">✓</div>
+                            <div class="text-white font-bold mb-1">No Hidden Fees</div>
+                            <div class="text-gray-500 text-sm">What you see is what you pay</div>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <div class="text-[#00D4FF] text-2xl mb-2">✓</div>
+                            <div class="text-white font-bold mb-1">Secure Booking</div>
+                            <div class="text-gray-500 text-sm">Verified by management team</div>
+                        </div>
+                    </div>
+
+                    <button onclick="scrollToContact()" class="btn-electric-solid px-12 py-4 rounded-full font-bold text-lg tracking-wider pulse-electric w-full md:w-auto">
+                        SECURE YOUR EXPERIENCE NOW
+                    </button>
+
+                    <p class="text-gray-600 text-sm mt-6">
+                        * Payment plans available. Contact management for details.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-3 border border-white/10">
+                        <svg class="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <span class="text-gray-500 text-xs tracking-widest">SECURE PAYMENT</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-3 border border-white/10">
+                        <svg class="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <span class="text-gray-500 text-xs tracking-widest">PRIVACY PROTECTION</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-3 border border-white/10">
+                        <svg class="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                    </div>
+                    <span class="text-gray-500 text-xs tracking-widest">MONEY BACK GUARANTEE</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-3 border border-white/10">
+                        <svg class="w-8 h-8 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <span class="text-gray-500 text-xs tracking-widest">24/7 SUPPORT</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 relative bg-gradient-to-b from-[#050505] to-[#0a0a0a]">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="relative inline-block mb-8">
-                <img src="https://lastfm.freetls.fastly.net/i/u/200x0/4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.jpg" 
-                     class="w-32 h-32 rounded-full border-4 border-[#00D4FF] object-cover mx-auto bw-image" 
-                     alt="Lenny Kravitz"
-                     onerror="this.src='https://via.placeholder.com/200/0a0a0a/00D4FF?text=LK'">
-                <div class="absolute bottom-0 right-0 w-8 h-8 bg-[#00D4FF] rounded-full border-4 border-black flex items-center justify-center">
-                    <div class="w-3 h-3 bg-black rounded-full animate-pulse"></div>
-                </div>
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-white">CLAIM YOUR SPOT</h2>
+                <p class="text-gray-500 font-serif text-lg">
+                    Only one fan will be selected. Contact management now to secure this once-in-a-lifetime opportunity.
+                </p>
             </div>
-            
-            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">READY TO ACCEPT?</h2>
-            <p class="text-gray-500 mb-12 max-w-2xl mx-auto">
-                This opportunity exists for one fan. If you feel the calling, reach out now. Lenny is waiting to meet the person who has supported the journey.
-            </p>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                <!-- Email Contact -->
-                <div class="contact-card glass-card-dark rounded-2xl p-8 border-gray-800 hover:border-red-500/50">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4 border border-red-500/30">
-                        <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="mailto:Themanagementteamofficialmail@gmail.com" class="contact-card glass-card-dark rounded-2xl p-8 border border-white/10 flex flex-col items-center text-center group">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mb-4 border border-red-500/30 group-hover:bg-red-500/20 transition-all">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display text-xl font-bold text-white mb-2">Email Us</h3>
-                    <p class="text-gray-500 text-sm mb-4">Send your inquiry and story</p>
-                    <a href="mailto:Themanagamentteamofficialmail@gmail.com?subject=Lenny%20Kravitz%203-Day%20Experience%20Inquiry" 
-                       class="text-red-500 font-semibold hover:text-red-400 transition-colors break-all text-sm">
-                        Themanagamentteamofficialmail@gmail.com
-                    </a>
-                </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-2">Email Management</h3>
+                    <p class="text-gray-400 text-sm mb-4">Preferred method. Include your full name and why you should be selected.</p>
+                    <span class="text-red-400 font-mono text-sm break-all">Themanagementteamofficialmail@gmail.com</span>
+                </a>
 
-                <!-- WhatsApp Contact -->
-                <div class="contact-card glass-card-dark rounded-2xl p-8 border-gray-800 hover:border-[#00D4FF]/50">
-                    <div class="w-16 h-16 rounded-full bg-[#00D4FF]/10 flex items-center justify-center mx-auto mb-4 border border-[#00D4FF]/30">
+                <a href="https://wa.me/16264779033" class="contact-card glass-card-dark rounded-2xl p-8 border border-white/10 flex flex-col items-center text-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#00D4FF]/10 flex items-center justify-center mb-4 border border-[#00D4FF]/30 group-hover:bg-[#00D4FF]/20 transition-all">
                         <svg class="w-8 h-8 text-[#00D4FF]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display text-xl font-bold text-white mb-2">WhatsApp</h3>
-                    <p class="text-gray-500 text-sm mb-4">Direct message for quick response</p>
-                    <a href="https://wa.me/16264779033?text=Hello%2C%20I%20am%20interested%20in%20the%20Lenny%20Kravitz%203-day%20experience.%20Please%20provide%20more%20information." 
-                       target="_blank"
-                       class="text-[#00D4FF] font-semibold hover:text-[#00D4FF]/80 transition-colors">
-                        +1 (626) 477-9033
-                    </a>
-                </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-2">WhatsApp Direct</h3>
+                    <p class="text-gray-400 text-sm mb-4">For urgent inquiries. Text only, no calls please.</p>
+                    <span class="text-[#00D4FF] font-mono text-sm">+1 (626) 477-9033</span>
+                </a>
             </div>
 
-            <div class="mt-12 p-6 glass-card-dark rounded-2xl border-white/5 max-w-2xl mx-auto">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f.jpg" 
-                         class="w-12 h-12 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
-                         alt="Lenny Kravitz"
-                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
-                    <div class="text-left">
-                        <div class="text-white font-bold">What to include in your message:</div>
-                        <div class="text-gray-500 text-sm">Help Lenny's team know you're the one</div>
-                    </div>
+            <div class="mt-12 glass-card-dark rounded-2xl p-6 border border-white/5 text-center">
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-green-400 text-sm tracking-widest">STATUS: ACCEPTING INQUIRIES</span>
                 </div>
-                <p class="text-gray-400 text-sm leading-relaxed text-left">
-                    Your full name, location, why you're the perfect guest for this experience, your favorite Lenny song/album and why, and your availability. Management will respond within 48 hours to selected inquiries.
+                <p class="text-gray-600 text-xs">
+                    Response time: 24-48 hours • Management reviews all applications personally
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#050505] border-t border-white/5 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex justify-center mb-6">
-                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a.jpg" 
-                     class="w-16 h-16 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
-                     alt="Lenny Kravitz"
-                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+    <footer class="py-12 bg-black border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <img src="https://kimi-web-img.moonshot.cn/img/cdn.mos.cms.futurecdn.net/f2771a644b58b7cc7b13783d4f5bbc89cce09066.jpg" alt="Lenny Kravitz" class="w-12 h-12 rounded-full border border-[#00D4FF]/30 bw-image">
+                <span class="font-display text-xl text-white tracking-widest">LENNY KRAVITZ</span>
             </div>
-            <div class="font-display text-3xl font-bold text-white mb-4">LENNY KRAVITZ</div>
-            <p class="text-gray-600 mb-8 max-w-md mx-auto text-sm">
-                "Let Love Rule" • One Fan • One Experience • One Unforgettable Memory
+            <p class="text-gray-600 text-sm mb-4">
+                © 2024 Lenny Kravitz. All rights reserved.<br>
+                This is an exclusive fan experience authorized by management.
             </p>
-            
-            <div class="flex justify-center gap-6 mb-8 text-sm">
-                <a href="mailto:Themanagamentteamofficialmail@gmail.com" class="text-gray-500 hover:text-red-500 transition-colors flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    Email Management
-                </a>
-                <a href="https://wa.me/16264779033" target="_blank" class="text-gray-500 hover:text-[#00D4FF] transition-colors flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    WhatsApp
-                </a>
-            </div>
-            
-            <div class="text-gray-700 text-xs">
-                © 2026 Lenny Kravitz. Official Management Contact Only. • Privacy Policy • Terms of Service
+            <div class="flex justify-center gap-6 text-xs text-gray-700">
+                <a href="#" class="hover:text-[#00D4FF] transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-[#00D4FF] transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-[#00D4FF] transition-colors">Refund Policy</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Remove loader
+        // Loader
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 1500);
         });
 
-        // Custom Cursor
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Mobile Menu Toggle
+        // Mobile Menu
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('translate-x-full');
         }
 
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-black/90', 'backdrop-blur-md', 'shadow-lg');
-            } else {
-                navbar.classList.remove('bg-black/90', 'backdrop-blur-md', 'shadow-lg');
-            }
-        });
-
+        // Smooth Scroll
         function scrollToContact() {
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Custom Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95');
+                navbar.classList.remove('bg-black/80');
+            } else {
+                navbar.classList.add('bg-black/80');
+                navbar.classList.remove('bg-black/95');
+            }
+        });
+
         // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from(".glass-card-dark", {
-            scrollTrigger: {
-                trigger: "#itinerary",
-                start: "top 80%",
-            },
-            y: 60,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: "power3.out"
+        // Animate cards on scroll
+        gsap.utils.toArray('.glass-card-dark').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
         });
 
-        gsap.from("#investment .glass-card-dark", {
-            scrollTrigger: {
-                trigger: "#investment",
-                start: "top 80%",
-            },
-            scale: 0.9,
+        // Animate text
+        gsap.from('h1', {
+            y: 100,
             opacity: 0,
-            duration: 1,
-            ease: "power3.out"
+            duration: 1.2,
+            ease: 'power4.out',
+            delay: 0.5
         });
     </script>
 </body>
