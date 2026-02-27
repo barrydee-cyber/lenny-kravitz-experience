@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenny Kravitz - Exclusive Invitation For One | Let Love Rule Experience</title>
+    <title>Lenny Kravitz - Exclusive Invitation | Let Love Rule Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         :root {
-            --gold: #D4AF37;
-            --gold-light: #F4E4BC;
-            --black: #0a0a0a;
-            --charcoal: #1a1a1a;
-            --ocean: #006994;
+            --electric-blue: #00D4FF;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --neutral-gray: #1a1a1a;
+            --light-gray: #2a2a2a;
         }
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--black);
-            color: white;
+            background-color: var(--darker-bg);
+            color: #e5e5e5;
             overflow-x: hidden;
         }
         
@@ -32,27 +32,27 @@
             font-family: 'Playfair Display', serif;
         }
         
-        /* Custom Scrollbar */
+        /* Custom Scrollbar - Dark */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--black);
+            background: var(--dark-bg);
         }
         ::-webkit-scrollbar-thumb {
-            background: var(--gold);
+            background: var(--electric-blue);
             border-radius: 4px;
         }
         
-        /* Gold Gradient Text */
-        .text-gold-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #F4E4BC 50%, #D4AF37 100%);
+        /* Electric Blue Gradient Text */
+        .text-electric-gradient {
+            background: linear-gradient(135deg, #00D4FF 0%, #0099CC 50%, #00D4FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        /* Animated Background */
+        /* Grain Overlay */
         .grain-overlay {
             position: fixed;
             top: 0;
@@ -61,78 +61,80 @@
             height: 100%;
             pointer-events: none;
             z-index: 50;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.08;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
         
-        /* Ocean Gradient */
-        .ocean-gradient {
-            background: linear-gradient(180deg, #0a0a0a 0%, #001a2e 50%, #006994 100%);
+        /* Dark Gradient */
+        .dark-gradient {
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
         }
         
-        /* Glass Card */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
+        /* Glass Card - Dark */
+        .glass-card-dark {
+            background: rgba(26, 26, 26, 0.6);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
         }
         
-        /* Button Styles */
-        .btn-gold {
-            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
-            color: #0a0a0a;
+        /* Electric Button */
+        .btn-electric {
+            background: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
-        .btn-gold::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.5s;
-        }
-        .btn-gold:hover::before {
-            left: 100%;
-        }
-        .btn-gold:hover {
+        .btn-electric:hover {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
             transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
         }
         
-        .btn-outline {
-            border: 2px solid #25D366;
-            color: #25D366;
+        /* Solid Electric Button */
+        .btn-electric-solid {
+            background: var(--electric-blue);
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+        .btn-electric-solid:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+        }
+        
+        /* Outline Buttons */
+        .btn-outline-email {
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
             transition: all 0.3s ease;
         }
-        .btn-outline:hover {
-            background: #25D366;
-            color: black;
-            transform: scale(1.05);
+        .btn-outline-email:hover {
+            background: #ff6b6b;
+            color: white;
         }
 
-        .btn-email {
-            border: 2px solid #EA4335;
-            color: #EA4335;
+        .btn-outline-whatsapp {
+            border: 2px solid #00D4FF;
+            color: #00D4FF;
             transition: all 0.3s ease;
         }
-        .btn-email:hover {
-            background: #EA4335;
-            color: white;
-            transform: scale(1.05);
+        .btn-outline-whatsapp:hover {
+            background: #00D4FF;
+            color: var(--dark-bg);
         }
         
-        /* Badge Pulse */
-        @keyframes pulse-gold {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-            50% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+        /* Pulse Animation */
+        @keyframes pulse-electric {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(0, 212, 255, 0); }
         }
-        .pulse-badge {
-            animation: pulse-gold 2s infinite;
+        .pulse-electric {
+            animation: pulse-electric 2s infinite;
         }
         
         /* Floating Animation */
@@ -144,22 +146,19 @@
             animation: float 6s ease-in-out infinite;
         }
         
-        /* Wave Animation */
-        @keyframes wave {
-            0% { transform: translateX(0) translateZ(0) scaleY(1); }
-            50% { transform: translateX(-25%) translateZ(0) scaleY(0.55); }
-            100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+        /* Glow Effects */
+        .glow-electric {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
         }
-        .wave-anim {
-            animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-            transform-origin: center bottom;
+        .glow-electric:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
         }
         
         /* Loading Screen */
         .loader {
             position: fixed;
             inset: 0;
-            background: #0a0a0a;
+            background: #050505;
             z-index: 10000;
             display: flex;
             justify-content: center;
@@ -183,7 +182,7 @@
             top: 50%;
             width: 100%;
             height: 2px;
-            background: #ef4444;
+            background: #666;
             transform: rotate(-5deg);
         }
 
@@ -200,7 +199,7 @@
         .cursor-glow {
             width: 20px;
             height: 20px;
-            border: 2px solid #D4AF37;
+            border: 2px solid var(--electric-blue);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -209,13 +208,22 @@
             mix-blend-mode: difference;
         }
 
+        /* BW Image Filter */
+        .bw-image {
+            filter: grayscale(100%) contrast(1.2) brightness(0.9);
+            transition: all 0.5s ease;
+        }
+        .bw-image:hover {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+        }
+
         /* Contact card hover */
         .contact-card {
             transition: all 0.3s ease;
         }
         .contact-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
         }
 
         /* Image hover effects */
@@ -227,8 +235,14 @@
         }
 
         /* Gradient overlay for images */
-        .img-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+        .img-overlay-dark {
+            background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.3) 50%, transparent 100%);
+        }
+
+        /* Lenny Kravitz specific images */
+        .lenny-portrait {
+            object-fit: cover;
+            object-position: center top;
         }
     </style>
 </head>
@@ -243,27 +257,33 @@
     <!-- Loading Screen -->
     <div class="loader" id="loader">
         <div class="text-center">
-            <div class="w-24 h-24 rounded-full border-4 border-yellow-600 border-t-yellow-400 animate-spin mb-4 mx-auto"></div>
-            <p class="font-display text-gold-gradient text-xl tracking-widest">PREPARING YOUR INVITATION</p>
+            <div class="w-24 h-24 rounded-full border-4 border-gray-700 border-t-[#00D4FF] animate-spin mb-4 mx-auto"></div>
+            <p class="font-display text-electric-gradient text-xl tracking-widest">INITIALIZING EXPERIENCE</p>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-40 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-40 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="font-display text-2xl font-bold text-gold-gradient tracking-wider">
+                <div class="font-display text-2xl font-bold text-white tracking-wider flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#00D4FF]/30">
+                        <img src="https://i.discogs.com/7K8X8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z8Q7Z.jpeg?w=100" 
+                             alt="LK" 
+                             class="w-full h-full object-cover bw-image"
+                             onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
+                    </div>
                     LENNY KRAVITZ
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#experience" class="text-sm tracking-widest hover:text-yellow-500 transition-colors">THE EXPERIENCE</a>
-                    <a href="#itinerary" class="text-sm tracking-widest hover:text-yellow-500 transition-colors">3-DAY JOURNEY</a>
-                    <a href="#investment" class="text-sm tracking-widest hover:text-yellow-500 transition-colors">INVESTMENT</a>
-                    <button onclick="scrollToContact()" class="btn-gold px-6 py-2 rounded-full font-semibold text-sm tracking-wider pulse-badge">
+                    <a href="#experience" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">THE EXPERIENCE</a>
+                    <a href="#itinerary" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">3-DAY JOURNEY</a>
+                    <a href="#investment" class="text-sm tracking-widest text-gray-400 hover:text-[#00D4FF] transition-colors">INVESTMENT</a>
+                    <button onclick="scrollToContact()" class="btn-electric-solid px-6 py-2 rounded-full font-semibold text-sm tracking-wider pulse-electric">
                         CLAIM YOUR SPOT
                     </button>
                 </div>
-                <button class="md:hidden text-yellow-500" onclick="toggleMenu()">
+                <button class="md:hidden text-[#00D4FF]" onclick="toggleMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -274,80 +294,84 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 bg-black z-30 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center space-y-8">
-        <a href="#experience" class="text-2xl font-display text-gold-gradient" onclick="toggleMenu()">THE EXPERIENCE</a>
-        <a href="#itinerary" class="text-2xl font-display text-gold-gradient" onclick="toggleMenu()">3-DAY JOURNEY</a>
-        <a href="#investment" class="text-2xl font-display text-gold-gradient" onclick="toggleMenu()">INVESTMENT</a>
-        <button onclick="scrollToContact(); toggleMenu();" class="btn-gold px-8 py-3 rounded-full font-semibold text-lg pulse-badge">
+        <a href="#experience" class="text-2xl font-display text-white" onclick="toggleMenu()">THE EXPERIENCE</a>
+        <a href="#itinerary" class="text-2xl font-display text-white" onclick="toggleMenu()">3-DAY JOURNEY</a>
+        <a href="#investment" class="text-2xl font-display text-white" onclick="toggleMenu()">INVESTMENT</a>
+        <button onclick="scrollToContact(); toggleMenu();" class="btn-electric-solid px-8 py-3 rounded-full font-semibold text-lg pulse-electric">
             CLAIM YOUR SPOT
         </button>
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden ocean-gradient">
-        <!-- Animated Waves -->
-        <div class="absolute bottom-0 left-0 w-[200%] h-32 opacity-20">
-            <svg class="wave-anim w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#006994"></path>
-            </svg>
-        </div>
-        
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden dark-gradient">
         <!-- Background Elements -->
         <div class="absolute inset-0">
-            <div class="absolute top-20 right-10 w-96 h-96 bg-yellow-600 rounded-full blur-[150px] opacity-20"></div>
-            <div class="absolute bottom-20 left-10 w-72 h-72 bg-blue-600 rounded-full blur-[120px] opacity-20"></div>
+            <div class="absolute top-20 right-10 w-96 h-96 bg-[#00D4FF] rounded-full blur-[200px] opacity-10"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-[#00D4FF] rounded-full blur-[150px] opacity-5"></div>
         </div>
 
         <!-- Hero Content -->
         <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
             
+            <!-- Lenny Portrait -->
+            <div class="mb-8 flex justify-center">
+                <div class="relative w-32 h-32">
+                    <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20 slow-spin"></div>
+                    <div class="relative w-full h-full rounded-full border-2 border-[#00D4FF]/30 overflow-hidden bg-black/50 backdrop-blur-sm">
+                        <img src="https://lastfm.freetls.fastly.net/i/u/770x0/8a0d6ffeb04e5a1c8b1f2c3d4e5f6a7b.jpg" 
+                             alt="Lenny Kravitz" 
+                             class="w-full h-full object-cover bw-image lenny-portrait"
+                             onerror="this.src='https://via.placeholder.com/300/0a0a0a/00D4FF?text=Lenny+Kravitz'">
+                    </div>
+                </div>
+            </div>
+            
             <!-- Exclusive Badge -->
-            <div class="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 border border-red-500/50 rounded-full text-red-400 text-xs tracking-[0.3em] mb-8 backdrop-blur-sm">
+            <div class="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs tracking-[0.3em] mb-8 backdrop-blur-sm">
                 <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                 FOR ONE SPECIAL FAN ONLY
             </div>
             
             <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
                 <span class="block text-white">ESCAPE WITH</span>
-                <span class="block text-gold-gradient mt-2">LENNY</span>
+                <span class="block text-electric-gradient mt-2">LENNY</span>
             </h1>
             
-            <p class="font-serif text-2xl md:text-3xl text-gray-300 italic max-w-3xl mx-auto mb-6">
+            <p class="font-serif text-2xl md:text-3xl text-gray-400 italic max-w-3xl mx-auto mb-6">
                 "Lenny has personally selected this experience for one dedicated fan. Could it be you?"
             </p>
             
-            <div class="flex flex-wrap justify-center gap-4 mt-8 mb-12 text-sm tracking-widest text-gray-400">
-                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span>YACHT CRUISE</span>
-                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span>HELICOPTER</span>
-                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span>PRIVATE BEACH</span>
-                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span>DINNER WITH LENNY</span>
+            <div class="flex flex-wrap justify-center gap-4 mt-8 mb-12 text-sm tracking-widest text-gray-500">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>YACHT CRUISE</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>HELICOPTER</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>PRIVATE BEACH</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#00D4FF] rounded-full"></span>DINNER WITH LENNY</span>
             </div>
 
             <!-- The ONE Badge -->
             <div class="relative inline-block mb-12">
-                <div class="absolute inset-0 bg-yellow-500 rounded-full blur-2xl opacity-30 slow-spin"></div>
-                <div class="relative glass-card w-32 h-32 rounded-full flex items-center justify-center border-yellow-500/50 mx-auto overflow-hidden">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                         alt="Lenny Kravitz" 
-                         class="absolute inset-0 w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-2xl opacity-20 slow-spin"></div>
+                <div class="relative glass-card-dark w-32 h-32 rounded-full flex items-center justify-center border-[#00D4FF]/30 mx-auto overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black"></div>
                     <div class="relative z-10 text-center">
-                        <div class="font-display text-5xl font-bold text-white drop-shadow-lg">1</div>
-                        <div class="text-[10px] tracking-widest text-white font-bold drop-shadow-md">SPOT LEFT</div>
+                        <div class="font-display text-5xl font-bold text-[#00D4FF]">1</div>
+                        <div class="text-[10px] tracking-widest text-gray-400">SPOT LEFT</div>
                     </div>
                 </div>
             </div>
 
             <!-- Pricing Preview -->
-            <div class="glass-card rounded-2xl px-8 py-4 mb-8 inline-block border-yellow-500/50">
-                <div class="text-gray-400 text-sm mb-1">INVESTMENT</div>
+            <div class="glass-card-dark rounded-2xl px-8 py-4 mb-8 inline-block border-white/10">
+                <div class="text-gray-500 text-sm mb-1">INVESTMENT</div>
                 <div class="flex items-center justify-center gap-3">
-                    <span class="price-strike text-gray-500 text-xl">$10,000</span>
-                    <span class="text-gold-gradient text-3xl font-display font-bold">$3,000</span>
+                    <span class="price-strike text-gray-600 text-xl">$10,000</span>
+                    <span class="text-electric-gradient text-3xl font-display font-bold">$3,000</span>
                 </div>
-                <div class="text-xs text-green-400 mt-1">Lenny covers 70%</div>
+                <div class="text-xs text-[#00D4FF] mt-1">Lenny covers 70%</div>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="scrollToContact()" class="btn-gold px-10 py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-2 group pulse-badge">
+                <button onclick="scrollToContact()" class="btn-electric-solid px-10 py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-2 group pulse-electric">
                     CLAIM THIS EXPERIENCE
                     <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -355,100 +379,101 @@
                 </button>
             </div>
 
-            <div class="mt-8 text-gray-500 text-sm">
-                Contact: <span class="text-yellow-500">Themanagamentteamofficialmail@gmail.com</span> • <span class="text-green-400">+1 (626) 477-9033</span>
+            <div class="mt-8 text-gray-600 text-sm">
+                Contact: <span class="text-[#00D4FF]">Themanagamentteamofficialmail@gmail.com</span> • <span class="text-gray-400">+1 (626) 477-9033</span>
             </div>
         </div>
 
         <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
             </svg>
         </div>
     </section>
 
     <!-- The Opportunity -->
-    <section id="experience" class="py-24 relative bg-black">
+    <section id="experience" class="py-24 relative bg-[#0a0a0a]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <div class="inline-block px-4 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-500 text-xs tracking-widest mb-6">
+                    <div class="inline-block px-4 py-1 bg-[#00D4FF]/10 border border-[#00D4FF]/30 rounded-full text-[#00D4FF] text-xs tracking-widest mb-6">
                         PERSONALLY CURATED BY LENNY
                     </div>
-                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gold-gradient">AN INVITATION FOR ONE</h2>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6 font-serif">
-                        This isn't a contest. This isn't a lottery. Lenny Kravitz has authorized his management to extend this exclusive invitation to <span class="text-yellow-500 font-bold">one special fan</span> who has shown unwavering dedication to the music, the message, and the movement.
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">AN INVITATION FOR ONE</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6 font-serif">
+                        This isn't a contest. This isn't a lottery. Lenny Kravitz has authorized his management to extend this exclusive invitation to <span class="text-[#00D4FF] font-bold">one special fan</span> who has shown unwavering dedication to the music, the message, and the movement.
                     </p>
-                    <p class="text-gray-400 leading-relaxed mb-8">
+                    <p class="text-gray-500 leading-relaxed mb-8">
                         For three days, you'll share space, stories, sunsets, and silence with Lenny in a private paradise. No crowds. No stage. Just the artist and you, connected by the spirit of "Let Love Rule."
                     </p>
                     
                     <div class="space-y-4">
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-bold text-white mb-1">Single Guest Experience</h4>
-                                <p class="text-gray-400 text-sm">You alone. Lenny. Three days of uninterrupted connection.</p>
+                                <p class="text-gray-500 text-sm">You alone. Lenny. Three days of uninterrupted connection.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-bold text-white mb-1">Hand-Selected by Management</h4>
-                                <p class="text-gray-400 text-sm">Contact verified directly via official channels only.</p>
+                                <p class="text-gray-500 text-sm">Contact verified directly via official channels only.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0 border border-[#00D4FF]/30">
+                                <svg class="w-6 h-6 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-bold text-white mb-1">Disclosed Upon Confirmation</h4>
-                                <p class="text-gray-400 text-sm">Location and dates shared only with the selected participant for privacy.</p>
+                                <p class="text-gray-500 text-sm">Location and dates shared only with the selected participant for privacy.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-blue-600 rounded-2xl blur-2xl opacity-30 transform rotate-3"></div>
-                    <div class="relative glass-card rounded-2xl p-4 float-anim">
-                        <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 bg-gray-800 relative">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
+                    <div class="absolute inset-0 bg-[#00D4FF] rounded-2xl blur-2xl opacity-10 transform rotate-3"></div>
+                    <div class="relative glass-card-dark rounded-2xl p-4 float-anim border border-white/10">
+                        <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 bg-gray-900 relative">
+                            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d.jpg" 
                                  alt="Lenny Kravitz Portrait" 
-                                 class="w-full h-full object-cover img-zoom">
-                            <div class="absolute inset-0 img-overlay"></div>
+                                 class="w-full h-full object-cover bw-image lenny-portrait img-zoom"
+                                 onerror="this.src='https://via.placeholder.com/400/0a0a0a/00D4FF?text=Lenny+Kravitz'">
+                            <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 left-4 right-4">
-                                <div class="text-yellow-500 text-xs tracking-widest mb-1">YOUR HOST</div>
-                                <div class="text-white font-display text-2xl font-bold">Lenny Kravitz</div>
-                                <div class="text-gray-300 text-sm">4x Grammy Award Winner</div>
+                                <div class="text-[#00D4FF] text-xs tracking-widest mb-1">YOUR HOST</div>
+                                <div class="text-white font-display text-xl">Lenny Kravitz</div>
+                                <div class="text-gray-400 text-sm">4x Grammy Award Winner</div>
                             </div>
                         </div>
                         <div class="flex justify-between items-center text-center px-2">
                             <div>
-                                <div class="text-2xl font-bold text-gold-gradient">3</div>
-                                <div class="text-xs text-gray-400">DAYS</div>
+                                <div class="text-2xl font-bold text-[#00D4FF]">3</div>
+                                <div class="text-xs text-gray-500">DAYS</div>
                             </div>
-                            <div class="h-8 w-px bg-gray-700"></div>
+                            <div class="h-8 w-px bg-gray-800"></div>
                             <div>
-                                <div class="text-2xl font-bold text-gold-gradient">1</div>
-                                <div class="text-xs text-gray-400">GUEST</div>
+                                <div class="text-2xl font-bold text-[#00D4FF]">1</div>
+                                <div class="text-xs text-gray-500">GUEST</div>
                             </div>
-                            <div class="h-8 w-px bg-gray-700"></div>
+                            <div class="h-8 w-px bg-gray-800"></div>
                             <div>
-                                <div class="text-2xl font-bold text-gold-gradient">1</div>
-                                <div class="text-xs text-gray-400">LEGEND</div>
+                                <div class="text-2xl font-bold text-[#00D4FF]">1</div>
+                                <div class="text-xs text-gray-500">LEGEND</div>
                             </div>
                         </div>
                     </div>
@@ -457,42 +482,54 @@
         </div>
     </section>
 
-    <!-- Gallery Strip -->
+    <!-- Lenny Gallery Strip -->
     <section class="py-12 bg-black overflow-hidden">
         <div class="flex gap-4 animate-marquee whitespace-nowrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity" alt="Lenny">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg/640px-Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg" class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity" alt="Lenny Performing">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity" alt="Lenny">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg/640px-Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg" class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity" alt="Lenny Performing">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity" alt="Lenny">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg/640px-Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg" class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity" alt="Lenny Performing">
+            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d.jpg" 
+                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
+                 alt="Lenny Kravitz"
+                 onerror="this.style.display='none'">
+            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e.jpg" 
+                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
+                 alt="Lenny Kravitz Performing"
+                 onerror="this.style.display='none'">
+            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f.jpg" 
+                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
+                 alt="Lenny Kravitz"
+                 onerror="this.style.display='none'">
+            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b.jpg" 
+                 class="h-64 w-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity bw-image" 
+                 alt="Lenny Kravitz"
+                 onerror="this.style.display='none'">
         </div>
     </section>
 
     <!-- 3-Day Itinerary -->
-    <section id="itinerary" class="py-24 relative bg-gradient-to-b from-black to-gray-900">
+    <section id="itinerary" class="py-24 relative bg-gradient-to-b from-[#0a0a0a] to-[#050505]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-gold-gradient">YOUR 3-DAY JOURNEY</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto font-serif text-lg">
+                <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">YOUR 3-DAY JOURNEY</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto font-serif text-lg">
                     A personalized itinerary designed for deep connection and unforgettable memories with Lenny.
                 </p>
             </div>
 
             <div class="space-y-12">
                 <!-- Day 1 -->
-                <div class="glass-card rounded-3xl overflow-hidden hover-lift transition-all duration-500 group">
+                <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
                     <div class="grid md:grid-cols-2">
                         <div class="relative h-64 md:h-auto overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&q=80" 
                                  alt="Helicopter Arrival" 
-                                 class="w-full h-full object-cover img-zoom">
-                            <div class="absolute top-4 left-4 bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm">DAY 1</div>
+                                 class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute top-4 left-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 1</div>
+                            <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 left-4 right-4">
                                 <div class="flex items-center gap-3">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                                         class="w-12 h-12 rounded-full border-2 border-yellow-500 object-cover" 
-                                         alt="Lenny">
+                                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d.jpg" 
+                                         class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
+                                         alt="Lenny"
+                                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                                     <div class="text-white text-sm font-bold">Lenny awaits your arrival</div>
                                 </div>
                             </div>
@@ -500,38 +537,39 @@
                         <div class="p-8 md:p-12 flex flex-col justify-center">
                             <h3 class="font-display text-3xl font-bold text-white mb-4">The Arrival</h3>
                             <div class="space-y-4 mb-6">
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Private helicopter transfer to exclusive location</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Personal welcome from Lenny at private villa</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Sunset acoustic performance (just for you)</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Intimate dinner: conversation and connection</span>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                                     class="w-16 h-16 rounded-full object-cover border-2 border-yellow-500" 
-                                     alt="Lenny">
+                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e.jpg" 
+                                     class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
+                                     alt="Lenny Kravitz"
+                                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                                 <div>
-                                    <p class="text-gray-300 italic text-sm">"From the moment you land, you're family. Let's break bread and share stories."</p>
-                                    <p class="text-yellow-500 text-xs mt-1">— Lenny</p>
+                                    <p class="text-gray-400 italic text-sm">"From the moment you land, you're family. Let's break bread and share stories."</p>
+                                    <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
                                 </div>
                             </div>
                         </div>
@@ -539,57 +577,60 @@
                 </div>
 
                 <!-- Day 2 -->
-                <div class="glass-card rounded-3xl overflow-hidden hover-lift transition-all duration-500 group">
+                <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
                     <div class="grid md:grid-cols-2">
                         <div class="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
                             <h3 class="font-display text-3xl font-bold text-white mb-4">The Adventure</h3>
                             <div class="space-y-4 mb-6">
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Private yacht cruise to secluded beach</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Beachside lunch prepared by personal chef</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Jam session: Lenny plays your requests</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Stargazing and deep conversation on deck</span>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg/640px-Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg" 
-                                     class="w-16 h-16 rounded-full object-cover border-2 border-yellow-500" 
-                                     alt="Lenny Performing">
+                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f.jpg" 
+                                     class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
+                                     alt="Lenny Kravitz Performing"
+                                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                                 <div>
-                                    <p class="text-gray-300 italic text-sm">"The ocean has a way of washing away everything but what matters. Let's get lost in the music."</p>
-                                    <p class="text-yellow-500 text-xs mt-1">— Lenny</p>
+                                    <p class="text-gray-400 italic text-sm">"The ocean has a way of washing away everything but what matters. Let's get lost in the music."</p>
+                                    <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
                                 </div>
                             </div>
                         </div>
                         <div class="relative h-64 md:h-auto overflow-hidden order-1 md:order-2">
                             <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80" 
                                  alt="Yacht Experience" 
-                                 class="w-full h-full object-cover img-zoom">
-                            <div class="absolute top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm">DAY 2</div>
+                                 class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute top-4 right-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 2</div>
+                            <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 right-4 left-4">
                                 <div class="flex items-center gap-3 justify-end">
                                     <div class="text-white text-sm font-bold text-right">Making music together</div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg/640px-Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg" 
-                                         class="w-12 h-12 rounded-full border-2 border-yellow-500 object-cover" 
-                                         alt="Lenny">
+                                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b.jpg" 
+                                         class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
+                                         alt="Lenny"
+                                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                                 </div>
                             </div>
                         </div>
@@ -597,18 +638,20 @@
                 </div>
 
                 <!-- Day 3 -->
-                <div class="glass-card rounded-3xl overflow-hidden hover-lift transition-all duration-500 group">
+                <div class="glass-card-dark rounded-3xl overflow-hidden hover-lift transition-all duration-500 group border border-white/5">
                     <div class="grid md:grid-cols-2">
                         <div class="relative h-64 md:h-auto overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" 
                                  alt="Private Dinner" 
-                                 class="w-full h-full object-cover img-zoom">
-                            <div class="absolute top-4 left-4 bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm">DAY 3</div>
+                                 class="w-full h-full object-cover bw-image img-zoom">
+                            <div class="absolute top-4 left-4 bg-[#00D4FF] text-black px-4 py-2 rounded-full font-bold text-sm">DAY 3</div>
+                            <div class="absolute inset-0 img-overlay-dark"></div>
                             <div class="absolute bottom-4 left-4 right-4">
                                 <div class="flex items-center gap-3">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                                         class="w-12 h-12 rounded-full border-2 border-yellow-500 object-cover" 
-                                         alt="Lenny">
+                                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d.jpg" 
+                                         class="w-12 h-12 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
+                                         alt="Lenny"
+                                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                                     <div class="text-white text-sm font-bold">A farewell to remember</div>
                                 </div>
                             </div>
@@ -616,38 +659,39 @@
                         <div class="p-8 md:p-12 flex flex-col justify-center">
                             <h3 class="font-display text-3xl font-bold text-white mb-4">The Bond</h3>
                             <div class="space-y-4 mb-6">
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Morning meditation and yoga with Lenny</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Personal Q&A: Ask anything</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Farewell feast: Chef's table experience</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-gray-300">
-                                    <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex items-center gap-3 text-gray-400">
+                                    <svg class="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                     <span>Exclusive signed guitar & personal memorabilia</span>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                                     class="w-16 h-16 rounded-full object-cover border-2 border-yellow-500" 
-                                     alt="Lenny">
+                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f.jpg" 
+                                     class="w-16 h-16 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
+                                     alt="Lenny Kravitz"
+                                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                                 <div>
-                                    <p class="text-gray-300 italic text-sm">"Goodbyes are just see-you-laters. You'll leave with a piece of my heart, and I'll have a piece of yours."</p>
-                                    <p class="text-yellow-500 text-xs mt-1">— Lenny</p>
+                                    <p class="text-gray-400 italic text-sm">"Goodbyes are just see-you-laters. You'll leave with a piece of my heart, and I'll have a piece of yours."</p>
+                                    <p class="text-[#00D4FF] text-xs mt-1">— Lenny</p>
                                 </div>
                             </div>
                         </div>
@@ -660,34 +704,36 @@
     <!-- Lenny Quote Section with Background Image -->
     <section class="py-24 relative overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg/640px-Lenny_Kravitz_Rock_in_Rio_Madrid_2012.jpg" 
-                 class="w-full h-full object-cover opacity-20" 
-                 alt="Lenny Background">
-            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
+            <img src="https://lastfm.freetls.fastly.net/i/u/770x0/0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.jpg" 
+                 class="w-full h-full object-cover opacity-20 bw-image" 
+                 alt="Lenny Kravitz Background"
+                 onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/80 to-[#050505]"></div>
         </div>
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                 class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-yellow-500 object-cover" 
-                 alt="Lenny Kravitz">
+            <img src="https://lastfm.freetls.fastly.net/i/u/200x0/1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.jpg" 
+                 class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-[#00D4FF] object-cover bw-image" 
+                 alt="Lenny Kravitz"
+                 onerror="this.src='https://via.placeholder.com/200/0a0a0a/00D4FF?text=LK'">
             <blockquote class="font-serif text-3xl md:text-4xl text-white italic mb-6">
                 "Let Love Rule isn't just a song—it's a way of life. I'm looking for someone who lives that truth."
             </blockquote>
-            <div class="text-yellow-500 font-display text-xl font-bold">— Lenny Kravitz</div>
+            <div class="text-[#00D4FF] font-display text-xl font-bold">— Lenny Kravitz</div>
         </div>
     </section>
 
     <!-- Investment Section -->
-    <section id="investment" class="py-24 relative bg-black overflow-hidden">
+    <section id="investment" class="py-24 relative bg-[#050505] overflow-hidden">
         <!-- Background Glow -->
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-600 rounded-full blur-[200px] opacity-10"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D4FF] rounded-full blur-[200px] opacity-5"></div>
         
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="text-center mb-12">
-                <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-gold-gradient">THE INVESTMENT</h2>
-                <p class="text-gray-400 font-serif text-lg">Lenny believes this experience should be accessible to a true fan.</p>
+                <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">THE INVESTMENT</h2>
+                <p class="text-gray-500 font-serif text-lg">Lenny believes this experience should be accessible to a true fan.</p>
             </div>
 
-            <div class="glass-card rounded-3xl p-8 md:p-12 border-yellow-500/50 relative overflow-hidden">
+            <div class="glass-card-dark rounded-3xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
                 <!-- Special Badge -->
                 <div class="absolute -top-6 -right-6 bg-red-500 text-white w-32 h-32 flex items-center justify-center transform rotate-12 shadow-2xl">
                     <div class="text-center transform -rotate-12">
@@ -700,69 +746,71 @@
                 <!-- Lenny Image in Card -->
                 <div class="flex justify-center mb-8">
                     <div class="relative">
-                        <div class="absolute inset-0 bg-yellow-500 rounded-full blur-xl opacity-30"></div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                             class="relative w-32 h-32 rounded-full border-4 border-yellow-500 object-cover" 
-                             alt="Lenny Kravitz">
+                        <div class="absolute inset-0 bg-[#00D4FF] rounded-full blur-xl opacity-20"></div>
+                        <img src="https://lastfm.freetls.fastly.net/i/u/200x0/2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.jpg" 
+                             class="relative w-32 h-32 rounded-full border-4 border-[#00D4FF] object-cover bw-image" 
+                             alt="Lenny Kravitz"
+                             onerror="this.src='https://via.placeholder.com/200/0a0a0a/00D4FF?text=LK'">
                     </div>
                 </div>
 
                 <div class="text-center mb-8">
-                    <div class="text-gray-400 mb-2 text-sm tracking-widest">TOTAL EXPERIENCE VALUE</div>
-                    <div class="price-strike text-gray-500 text-3xl font-display mb-4">$10,000</div>
+                    <div class="text-gray-500 mb-2 text-sm tracking-widest">TOTAL EXPERIENCE VALUE</div>
+                    <div class="price-strike text-gray-600 text-3xl font-display mb-4">$10,000</div>
                     
                     <div class="flex justify-center items-center gap-4 mb-6">
                         <div class="text-right">
-                            <div class="text-green-400 text-sm font-bold">LENNY COVERS</div>
-                            <div class="text-gray-400 text-xs">$7,000 (70%)</div>
+                            <div class="text-[#00D4FF] text-sm font-bold">LENNY COVERS</div>
+                            <div class="text-gray-600 text-xs">$7,000 (70%)</div>
                         </div>
-                        <div class="h-12 w-px bg-gray-700"></div>
+                        <div class="h-12 w-px bg-gray-800"></div>
                         <div class="text-left">
-                            <div class="text-yellow-500 text-sm font-bold">YOU INVEST</div>
-                            <div class="text-gold-gradient text-5xl font-display font-bold">$3,000</div>
+                            <div class="text-gray-400 text-sm font-bold">YOU INVEST</div>
+                            <div class="text-electric-gradient text-5xl font-display font-bold">$3,000</div>
                         </div>
                     </div>
                     
-                    <div class="inline-block bg-green-500/10 border border-green-500/30 text-green-400 px-4 py-2 rounded-full text-sm">
+                    <div class="inline-block bg-[#00D4FF]/10 border border-[#00D4FF]/30 text-[#00D4FF] px-4 py-2 rounded-full text-sm">
                         ✓ All-inclusive • No hidden costs • Personal concierge
                     </div>
                 </div>
 
                 <div class="space-y-4 mb-8">
                     <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-400">Private Villa Suite (3 nights)</span>
+                        <span class="text-gray-500">Private Villa Suite (3 nights)</span>
                         <span class="text-white font-semibold">Included</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-400">Helicopter Airport Transfer</span>
+                        <span class="text-gray-500">Helicopter Airport Transfer</span>
                         <span class="text-white font-semibold">Included</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-400">Private Yacht & Captain</span>
+                        <span class="text-gray-500">Private Yacht & Captain</span>
                         <span class="text-white font-semibold">Included</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-400">All Meals & Premium Beverages</span>
+                        <span class="text-gray-500">All Meals & Premium Beverages</span>
                         <span class="text-white font-semibold">Included</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                        <span class="text-gray-400">Personal Photographer</span>
+                        <span class="text-gray-500">Personal Photographer</span>
                         <span class="text-white font-semibold">Included</span>
                     </div>
                     <div class="flex justify-between items-center py-3">
-                        <span class="text-gray-400">Signed Gibson Guitar & Memorabilia</span>
+                        <span class="text-gray-500">Signed Gibson Guitar & Memorabilia</span>
                         <span class="text-white font-semibold">Included</span>
                     </div>
                 </div>
 
-                <div class="bg-yellow-500/10 rounded-xl p-6 mb-8 border border-yellow-500/20">
+                <div class="bg-[#00D4FF]/5 rounded-xl p-6 mb-8 border border-[#00D4FF]/20">
                     <div class="flex items-start gap-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                             class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500 flex-shrink-0" 
-                             alt="Lenny">
+                        <img src="https://lastfm.freetls.fastly.net/i/u/100x0/3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.jpg" 
+                             class="w-12 h-12 rounded-full object-cover border-2 border-[#00D4FF] bw-image flex-shrink-0" 
+                             alt="Lenny Kravitz"
+                             onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                         <div>
                             <h4 class="font-bold text-white mb-1">Selection Process</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">
+                            <p class="text-gray-500 text-sm leading-relaxed">
                                 This invitation is extended to one fan only. Contact management directly via email or WhatsApp to express your interest. Dates and location will be disclosed upon selection. Verification required.
                             </p>
                         </div>
@@ -772,7 +820,7 @@
                 <!-- Contact CTA -->
                 <div class="grid md:grid-cols-2 gap-4">
                     <a href="mailto:Themanagamentteamofficialmail@gmail.com?subject=Lenny%20Kravitz%203-Day%20Experience%20Inquiry" 
-                       class="btn-email py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-3">
+                       class="btn-outline-email py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-3 bg-transparent">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
@@ -780,7 +828,7 @@
                     </a>
                     <a href="https://wa.me/16264779033?text=Hello%2C%20I%20am%20interested%20in%20the%20Lenny%20Kravitz%203-day%20experience.%20Please%20provide%20more%20information." 
                        target="_blank"
-                       class="btn-outline py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-3">
+                       class="btn-outline-whatsapp py-4 rounded-full font-bold text-lg tracking-wider flex items-center justify-center gap-3 bg-transparent">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
@@ -788,7 +836,7 @@
                     </a>
                 </div>
                 
-                <p class="text-center text-gray-500 text-xs mt-4">
+                <p class="text-center text-gray-600 text-xs mt-4">
                     Official Management Contact Only • Verification Required • Serious Inquiries Only
                 </p>
             </div>
@@ -796,32 +844,33 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 relative bg-gradient-to-b from-gray-900 to-black">
+    <section id="contact" class="py-24 relative bg-gradient-to-b from-[#050505] to-[#0a0a0a]">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="relative inline-block mb-8">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                     class="w-32 h-32 rounded-full border-4 border-yellow-500 object-cover mx-auto" 
-                     alt="Lenny Kravitz">
-                <div class="absolute bottom-0 right-0 w-8 h-8 bg-green-500 rounded-full border-4 border-black flex items-center justify-center">
-                    <div class="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                <img src="https://lastfm.freetls.fastly.net/i/u/200x0/4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.jpg" 
+                     class="w-32 h-32 rounded-full border-4 border-[#00D4FF] object-cover mx-auto bw-image" 
+                     alt="Lenny Kravitz"
+                     onerror="this.src='https://via.placeholder.com/200/0a0a0a/00D4FF?text=LK'">
+                <div class="absolute bottom-0 right-0 w-8 h-8 bg-[#00D4FF] rounded-full border-4 border-black flex items-center justify-center">
+                    <div class="w-3 h-3 bg-black rounded-full animate-pulse"></div>
                 </div>
             </div>
             
-            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gold-gradient">READY TO ACCEPT?</h2>
-            <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">READY TO ACCEPT?</h2>
+            <p class="text-gray-500 mb-12 max-w-2xl mx-auto">
                 This opportunity exists for one fan. If you feel the calling, reach out now. Lenny is waiting to meet the person who has supported the journey.
             </p>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                 <!-- Email Contact -->
-                <div class="contact-card glass-card rounded-2xl p-8 border-gray-700 hover:border-red-500/50">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4">
+                <div class="contact-card glass-card-dark rounded-2xl p-8 border-gray-800 hover:border-red-500/50">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4 border border-red-500/30">
                         <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold text-white mb-2">Email Us</h3>
-                    <p class="text-gray-400 text-sm mb-4">Send your inquiry and story</p>
+                    <p class="text-gray-500 text-sm mb-4">Send your inquiry and story</p>
                     <a href="mailto:Themanagamentteamofficialmail@gmail.com?subject=Lenny%20Kravitz%203-Day%20Experience%20Inquiry" 
                        class="text-red-500 font-semibold hover:text-red-400 transition-colors break-all text-sm">
                         Themanagamentteamofficialmail@gmail.com
@@ -829,33 +878,34 @@
                 </div>
 
                 <!-- WhatsApp Contact -->
-                <div class="contact-card glass-card rounded-2xl p-8 border-gray-700 hover:border-green-500/50">
-                    <div class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                <div class="contact-card glass-card-dark rounded-2xl p-8 border-gray-800 hover:border-[#00D4FF]/50">
+                    <div class="w-16 h-16 rounded-full bg-[#00D4FF]/10 flex items-center justify-center mx-auto mb-4 border border-[#00D4FF]/30">
+                        <svg class="w-8 h-8 text-[#00D4FF]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold text-white mb-2">WhatsApp</h3>
-                    <p class="text-gray-400 text-sm mb-4">Direct message for quick response</p>
+                    <p class="text-gray-500 text-sm mb-4">Direct message for quick response</p>
                     <a href="https://wa.me/16264779033?text=Hello%2C%20I%20am%20interested%20in%20the%20Lenny%20Kravitz%203-day%20experience.%20Please%20provide%20more%20information." 
                        target="_blank"
-                       class="text-green-500 font-semibold hover:text-green-400 transition-colors">
+                       class="text-[#00D4FF] font-semibold hover:text-[#00D4FF]/80 transition-colors">
                         +1 (626) 477-9033
                     </a>
                 </div>
             </div>
 
-            <div class="mt-12 p-6 glass-card rounded-2xl border-yellow-500/20 max-w-2xl mx-auto">
+            <div class="mt-12 p-6 glass-card-dark rounded-2xl border-white/5 max-w-2xl mx-auto">
                 <div class="flex items-center gap-4 mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                         class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500" 
-                         alt="Lenny">
+                    <img src="https://lastfm.freetls.fastly.net/i/u/100x0/5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f.jpg" 
+                         class="w-12 h-12 rounded-full object-cover border-2 border-[#00D4FF] bw-image" 
+                         alt="Lenny Kravitz"
+                         onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
                     <div class="text-left">
                         <div class="text-white font-bold">What to include in your message:</div>
-                        <div class="text-gray-400 text-sm">Help Lenny's team know you're the one</div>
+                        <div class="text-gray-500 text-sm">Help Lenny's team know you're the one</div>
                     </div>
                 </div>
-                <p class="text-gray-300 text-sm leading-relaxed text-left">
+                <p class="text-gray-400 text-sm leading-relaxed text-left">
                     Your full name, location, why you're the perfect guest for this experience, your favorite Lenny song/album and why, and your availability. Management will respond within 48 hours to selected inquiries.
                 </p>
             </div>
@@ -863,24 +913,25 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-gray-900 pt-16 pb-8">
+    <footer class="bg-[#050505] border-t border-white/5 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <div class="flex justify-center mb-6">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lenny_Kravitz_Cannes_2013.jpg/640px-Lenny_Kravitz_Cannes_2013.jpg" 
-                     class="w-16 h-16 rounded-full border-2 border-yellow-500 object-cover" 
-                     alt="Lenny Kravitz">
+                <img src="https://lastfm.freetls.fastly.net/i/u/100x0/6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a.jpg" 
+                     class="w-16 h-16 rounded-full border-2 border-[#00D4FF] object-cover bw-image" 
+                     alt="Lenny Kravitz"
+                     onerror="this.src='https://via.placeholder.com/100/0a0a0a/00D4FF?text=LK'">
             </div>
-            <div class="font-display text-3xl font-bold text-gold-gradient mb-4">LENNY KRAVITZ</div>
-            <p class="text-gray-500 mb-8 max-w-md mx-auto text-sm">
+            <div class="font-display text-3xl font-bold text-white mb-4">LENNY KRAVITZ</div>
+            <p class="text-gray-600 mb-8 max-w-md mx-auto text-sm">
                 "Let Love Rule" • One Fan • One Experience • One Unforgettable Memory
             </p>
             
             <div class="flex justify-center gap-6 mb-8 text-sm">
-                <a href="mailto:Themanagamentteamofficialmail@gmail.com" class="text-gray-400 hover:text-red-500 transition-colors flex items-center gap-2">
+                <a href="mailto:Themanagamentteamofficialmail@gmail.com" class="text-gray-500 hover:text-red-500 transition-colors flex items-center gap-2">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     Email Management
                 </a>
-                <a href="https://wa.me/16264779033" target="_blank" class="text-gray-400 hover:text-green-500 transition-colors flex items-center gap-2">
+                <a href="https://wa.me/16264779033" target="_blank" class="text-gray-500 hover:text-[#00D4FF] transition-colors flex items-center gap-2">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                     WhatsApp
                 </a>
@@ -930,7 +981,7 @@
         // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from(".glass-card", {
+        gsap.from(".glass-card-dark", {
             scrollTrigger: {
                 trigger: "#itinerary",
                 start: "top 80%",
@@ -942,7 +993,7 @@
             ease: "power3.out"
         });
 
-        gsap.from("#investment .glass-card", {
+        gsap.from("#investment .glass-card-dark", {
             scrollTrigger: {
                 trigger: "#investment",
                 start: "top 80%",
